@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Accessory Shop - Products</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+        header { background-color: #ff6600; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
+        nav a:hover { color: white; }
+        .filters { text-align: center; padding: 20px; background-color: #fff; margin-bottom: 20px; }
+        .filters button { background-color: #333; color: white; border: none; padding: 10px 15px; margin: 0 5px; cursor: pointer; border-radius: 5px; }
+        .filters button:hover { background-color: #555; }
+        .products { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .product { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .product img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
+        .product h3 { margin: 10px 0; }
+        .product p { color: #666; font-size: 0.9em; }
+        .product .price { font-weight: bold; color: #ff6600; }
+        .product button { background-color: #ff6600; color: white; border: none; padding: 10px; width: 100%; cursor: pointer; border-radius: 5px; margin-top: 10px; }
+        .product button:hover { background-color: #e55a00; }
+        footer { background-color: #333; color: white; text-align: center; padding: 20px; }
+        footer a { color: #ff6600; text-decoration: none; margin: 0 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white;">My Accessory Shop</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="signup.html">SIGN UP</a>
+        </nav>
+    </header>
+    
+    <section class="filters">
+        <h2>Our Products</h2>
+        <p>Browse our collection of unique accessories.</p>
+        <button onclick="filterProducts('all')">All</button>
+        <button onclick="filterProducts('jewelry')">Jewelry</button>
+        <button onclick="filterProducts('bags')">Bags</button>
+        <button onclick="filterProducts('cases')">Phone Cases</button>
+    </section>
+    
+    <section class="products" id="productGrid">
+        <div class="product" data-category="jewelry">
+            <img src="pvc1.jpg" alt="Gold Necklace">
+            <h3>3D Soft PVC logo Embossed Silicone</h3>
+            <p>Custom PVC rubber patches with unique 3D embossed designs, made from eco-friendly PVC material, perfect for garments, bags, shoes, and more. Free design support and skilled customization turn your ideas into reality. Durable, versatile, and available in custom shapes, sizes, and colors to match your product needs. </p>
+            <p class="price">RS100.00</p>
+            <button>View Details</button>
+        </div>
+        <div class="product" data-category="bags">
+            <img src="pvc2.jpg" alt="Leather Bag">
+            <h3>3D Soft PVC logo Embossed Silicone</h3>
+            <p>Custom PVC rubber patches with unique 3D embossed designs, made from eco-friendly PVC material, perfect for garments, bags, shoes, and more. Free design support and skilled customization turn your ideas into reality. Durable, versatile, and available in custom shapes, sizes, and colors to match your product needs.</p>
+            <p class="price">$50.00</p>
+            <button>View Details</button>
+        </div>
+        <div class="product" data-category="cases">
+            <img src="pvc3.jpg" alt="Phone Case">
+            <h3>Eco-friendly Embossed Logo Silicone Label 3D</h3>
+            <p>Our Rubber PVC / Silicone patches are made to order and they’re flexible and lightweight. More durable and more colorful than embroidery. Great foroutdoor use as they have been known to last for five years, even on the sails of ships. Our products are waterproof, weather resistant and they can withstand cold temperatures.Rubber PVC is an alternative to rubber and a widely used in many types of products,it feels soft and flexible and can be molded into any shape or size.</p>
+            <p class="price">$15.00</p>
+            <button>View Details</button>
+        </div>
+        <div class="product" data-category="jewelry">
+            <img src="pvc4.jpg" alt="Silver Earrings">
+            <h3>Personalized Custom Logo Pvc Patches Badge Hook and Loop</h3>
+            <p>High-quality soft 3D PVC patches made from eco-friendly, non-toxic materials. Features include stain-resistant, washable, and impact-resistant properties with smooth, burr-free edges. Suitable for clothing, hats, bags, and more. Available in custom shapes and colors with various backing options like hook-and-loop.</p>
+            <p class="price">$20.00</p>
+            <button>View Details</button>
+        </div>
+        <div class="product" data-category="bags">
+            <img src="pvc5.jpg" alt="Crossbody Bag">
+            <h3>Eco-friendly 3d logo Soft Silicone Clothing Label Rubber PVC Garment Rubber Labels</h3>
+            <p>Using special high quality plastic as raw material. Own the characteristic of high hardness, not easy to fade, thick and durable, comfortable feeling.</p>
+            <p class="price">$35.00</p>
+            <button>View Details </button>
+        </div>
+        <div class="product" data-category="cases">
+            <img src="pvc6.jpg" alt="Wallet Case">
+            <h3>High Quality Custom Embossed 3D PVC Rubber Logo Patches Rubber Label for Clothing Labels</h3>
+            <p>* 2D Rubber Label
+            * 3D Rubber Label
+            * PVC & Silicone Rubber Label
+            * Adhesives Backing
+            * Heat Transfer Backing
+            *  Sewn Backing.</p>
+            <p class="price">$18.00</p>
+            <button>View Details</button>
+        </div>
+            <div class="product" data-category="cases">
+            <img src="pvc7.jpg" alt="Wallet Case">
+            <h3>Custom Embossed 3D PVC Rubber Label Rubber Logo Patches Custom Clothing Labels</h3>
+            <p>Minor customization Drawing-based customization Sample-based customization Full customization</p>
+            <p class="price">$18.00</p>
+            <button>View Details</button>
+        </div>
+   </div>
+            <div class="product" data-category="cases">
+            <img src="pvc8.jpg" alt="Wallet Case">
+            <h3>Custom 3d Embossed Silicone Logo Printing Pvc Badge Rubber Patch Heat Transfer Labels for Clothing</h3>
+            <p>Rubber,PVC,Silicone 45*55mm or your request black or as your Smooth/Durable/Washable request Clothing,bag,hat,etc. </p>
+            <p class="price">$18.00</p>
+            <button>View Details</button>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 My Accessory Shop. All rights reserved.</p>
+        <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a>
+    </footer>
+    
+    <script>
+        function filterProducts(category) {
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                if (category === 'all' || product.getAttribute('data-category') === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

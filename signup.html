@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Accessory Shop - Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #ff6600, #333); display: flex; justify-content: center; align-items: center; min-height: 100vh; color: #333; }
+        .container { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); width: 100%; max-width: 400px; position: relative; overflow: hidden; animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .form-container { display: flex; width: 200%; transition: transform 0.6s ease-in-out; }
+        .form { width: 50%; padding: 20px; box-sizing: border-box; }
+        .signin { transform: translateX(0); }
+        .signup { transform: translateX(-50%); }
+        h2 { text-align: center; margin-bottom: 20px; color: #ff6600; animation: slideDown 0.8s ease-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; transition: border-color 0.3s, box-shadow 0.3s; }
+        input:focus { border-color: #ff6600; box-shadow: 0 0 5px rgba(255, 102, 0, 0.5); outline: none; }
+        button { width: 100%; padding: 12px; background: #ff6600; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background 0.3s, transform 0.2s; }
+        button:hover { background: #e55a00; transform: scale(1.05); }
+        button:active { transform: scale(0.95); }
+        .toggle { text-align: center; margin-top: 20px; }
+        .toggle button { background: none; color: #ff6600; border: none; cursor: pointer; text-decoration: underline; transition: color 0.3s; }
+        .toggle button:hover { color: #e55a00; }
+        .error { color: red; font-size: 0.9em; display: none; animation: fadeInError 0.5s; }
+        @keyframes fadeInError { from { opacity: 0; } to { opacity: 1; } }
+        .bounce { animation: bounce 0.5s; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } 60% { transform: translateY(-5px); } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container signin" id="formContainer">
+            <div class="form">
+                <h2>Sign In</h2>
+                <form id="signinForm">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <div class="error" id="signinError">Invalid email or password.</div>
+                    <button type="submit">Sign In</button>
+                </form>
+                <div class="toggle">
+                    <p>Don't have an account? <button onclick="toggleForm('signup')">Sign Up</button></p>
+                </div>
+            </div>
+            <div class="form">
+                <h2>Sign Up</h2>
+                <form id="signupForm">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <div class="error" id="signupError">Passwords do not match or email is invalid.</div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="toggle">
+                    <p>Already have an account? <button onclick="toggleForm('signin')">Sign In</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleForm(form) {
+            const container = document.getElementById('formContainer');
+            if (form === 'signup') {
+                container.classList.remove('signin');
+                container.classList.add('signup');
+            } else {
+                container.classList.remove('signup');
+                container.classList.add('signin');
+            }
+        }
+        
+        // Basic form validation with animation (demo only)
+        document.getElementById('signinForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your signin logic here (e.g., API call)
+            this.querySelector('button').classList.add('bounce');
+            setTimeout(() => alert('Sign In successful! (Demo)'), 500);
+        });
+        
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = this.querySelector('input[type="password"]').value;
+            const confirmPassword = this.querySelectorAll('input[type="password"]')[1].value;
+            if (password !== confirmPassword) {
+                document.getElementById('signupError').style.display = 'block';
+                return;
+            }
+            // Add your signup logic here (e.g., API call)
+            this.querySelector('button').classList.add('bounce');
+            setTimeout(() => alert('Sign Up successful! (Demo)'), 500);
+        });
+    </script>
+</body>
+</html>

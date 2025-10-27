@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Accessory Shop - FAQ</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+        header { background-color: #ff6600; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
+        nav a:hover { color: white; }
+        .faq-section { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+        .faq-item { background: white; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .faq-question { padding: 15px; cursor: pointer; font-weight: bold; background-color: #f0f0f0; border-radius: 8px 8px 0 0; }
+        .faq-question:hover { background-color: #e0e0e0; }
+        .faq-answer { padding: 15px; display: none; border-top: 1px solid #ddd; }
+        .cta { text-align: center; padding: 20px; background-color: #ff6600; color: white; border-radius: 8px; margin-top: 20px; }
+        .cta a { color: white; text-decoration: none; font-weight: bold; }
+        footer { background-color: #333; color: white; text-align: center; padding: 20px; }
+        footer a { color: #ff6600; text-decoration: none; margin: 0 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white;">My Accessory Shop</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="signup.html">SIGN UP</a>
+        </nav>
+    </header>
+    
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to common questions about our accessories. If you don't see what you're looking for, <a href="contact.html">contact us</a>.</p>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">How do I care for my accessories?</div>
+            <div class="faq-answer">Store jewelry in a cool, dry place to prevent tarnishing. Clean bags with a soft cloth and mild soap. Avoid exposure to water or harsh chemicals.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">What is your return policy?</div>
+            <div class="faq-answer">We offer a 30-day return policy for unused items in original packaging. Contact us for a return label. Refunds are processed within 5-7 business days.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">Do you offer international shipping?</div>
+            <div class="faq-answer">Yes, we ship worldwide. Shipping costs and times vary by location. Check our products page for estimates.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">Are your products sustainable?</div>
+            <div class="faq-answer">We prioritize eco-friendly materials like recycled metals and organic fabrics. Learn more on our About page.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">How do I know my size for jewelry?</div>
+            <div class="faq-answer">Check our sizing guide on the product page. If unsure, measure your finger or wrist and compare to our chart.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">Can I customize accessories?</div>
+            <div class="faq-answer">Yes, we offer custom engraving on select items. Email us with details for a quote.</div>
+        </div>
+        
+        <div class="cta">
+            <h3>Still Have Questions?</h3>
+            <p>Reach out to our team for personalized help.</p>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 My Accessory Shop. All rights reserved.</p>
+        <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a>
+    </footer>
+    
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

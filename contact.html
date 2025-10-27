@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Accessory Shop - Contact</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+        header { background-color: #ff6600; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
+        nav a:hover { color: white; }
+        .contact-section { padding: 40px 20px; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; }
+        .contact-form, .contact-info { flex: 1; min-width: 300px; }
+        .contact-form h2, .contact-info h2 { color: #ff6600; }
+        form { display: flex; flex-direction: column; }
+        input, textarea { padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
+        button { background-color: #ff6600; color: white; border: none; padding: 12px; cursor: pointer; border-radius: 5px; font-weight: bold; }
+        button:hover { background-color: #e55a00; }
+        .contact-info p { margin: 10px 0; }
+        iframe { width: 100%; height: 300px; border: none; border-radius: 5px; margin-top: 20px; }
+        footer { background-color: #333; color: white; text-align: center; padding: 20px; }
+        footer a { color: #ff6600; text-decoration: none; margin: 0 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white;">My Accessory Shop</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="signup.html">SIGN UP</a>
+        </nav>
+    </header>
+    
+    <section class="contact-section">
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <p>Have questions about our accessories? Send us a message!</p>
+            <form action="#" method="post">  <!-- Replace # with your form handler URL -->
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> info@myaccessoryshop.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Address:</strong> 123 Fashion Street, Style City, SC 12345</p>
+            <p>We respond within 24 hours. Visit us during business hours: Mon-Fri, 9 AM - 5 PM.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.419415484681!3d37.774929779759!2d-122.421604485681!2d37.776138779759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064b5c5c5c5%3A0x4a6b8b8b8b8b8b8b!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1633020000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 My Accessory Shop. All rights reserved.</p>
+        <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a>
+    </footer>
+</body>
+</html>
